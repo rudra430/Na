@@ -956,25 +956,27 @@ def confirm_id(mail,uid,otp,data,ses):
         '__a': "",
         '__user': uid}
         headers = {
-        'User-Agent': ugenX(),
-        'Accept-Encoding': "gzip, deflate, br, zstd",
-        'sec-ch-ua-full-version-list': "",
-        'sec-ch-ua-platform': "\"Android\"",
-        'sec-ch-ua': "\"Android WebView\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
-        'sec-ch-ua-model': "\"\"",
-        'sec-ch-ua-mobile': "?1",
-        'x-asbd-id': "129477",
-        'x-fb-lsd': "KnpjLz-YdSXR3zBqds98cK",
-        'sec-ch-prefers-color-scheme': "light",
-        'sec-ch-ua-platform-version': "\"\"",
-        'origin': "https://masic.facebook.com",
-        'x-requested-with': "mark.via.gp",
-        'sec-fetch-site': "same-origin",
-        'sec-fetch-mode': "cors",
-        'sec-fetch-dest': "empty",
-        'referer': "https://masic.facebook.com/confirmemail.php?next=https%3A%2F%2Fm.facebook.com%2F%3Fdeoia%3D1&soft=hjk",
-        'accept-language': "en-GB,en-US;q=0.9,en;q=0.8",
-        'priority': "u=1, i"}
+    'authority': 'x.facebook.com',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'en-US,en-IN;q=0.9,en;q=0.8',
+    'cache-control': 'max-age=0',
+    'dpr': '3',
+    'sec-ch-prefers-color-scheme': 'light',
+    'sec-ch-ua': '"Chromium";v="137", "Not/A)Brand";v="24"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="137.0.7337.0", "Not/A)Brand";v="24.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"I2405"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"15.0.0"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36',
+    'viewport-width': '980',
+}
+
         response = ses.post(url, params=params, data=payload, headers=headers)
         if "checkpoint" in str(response.url):
             print(f"{X}{R} FUCKED ID DISABLED")
